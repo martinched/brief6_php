@@ -8,7 +8,7 @@ Ces instructions vous permettront d'obtenir une copie du projet en fonctionnemen
 
 ### Prérequis
 
-Ce que vous devez installer pour utiliser le projet
+Pour utiliser le projet, vous devez installer XAMPP et avoir une connection internet.
 
 ### Installation
 
@@ -28,7 +28,7 @@ Si votre projet utilise un système de versionnement, listez les versions ici.
 
 ## Auteurs
 
-- **Votre Nom** - _Travail Initial_ - [VotrePseudoGitHub](https://github.com/VotrePseudoGitHub)
+- **Martin Chédaille** - _Brief n°6_ - [martinched](https://github.com/martinchedGitHub)
 
 Voir aussi la liste des [contributeurs](https://github.com/votreprojet/contributeurs) qui ont participé à ce projet.
 
@@ -38,5 +38,4 @@ Ce projet est sous licence XYZ - voir le fichier [LICENSE.md](LICENSE.md) pour p
 
 ## Remerciements
 
-- Remerciements à toute personne/organisation qui a contribué au projet.
-- Inspirations, code snippets, etc.
+- Remerciements à mon binôme Agustin Zavalla
