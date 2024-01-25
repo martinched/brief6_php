@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/e14b518d69.js" crossorigin="anonymous"></script>
     <title>php pdo</title>
 </head>
-<body class="mx-20 ">
+<body class="mx-20 bg-red-700">
     <header>
         <h1 class="text-3xl font-extrabold text-center m-10">Mes favoris</h1>
     </header>

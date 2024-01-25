@@ -1,7 +1,17 @@
 <?php
-    $pdo = new PDO('mysql:host=localhost;dbname=favori', 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 
-//echo '<pre>'; print_r($pdo); echo '</pre>';
-//echo '<pre>'; print_r(get_class_methods($pdo)); echo '</pre>';
+require("connect.php");
+
+$dsn = 'mysql:dbname='.BASE."; host=".SERVER;
+
+    //$pdo = new PDO($dsn, 'root', '', array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+
+try{
+  $pdo=new PDO($dsn,USER,PASSWORD);
+} catch(PDOException $e){
+    echo "Echec de la connexion: %s\n" .$e->getMessage();
+    exit();
+}
+echo "Connexion réussie";
+
 ?>
-

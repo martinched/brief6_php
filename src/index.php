@@ -19,20 +19,20 @@ $requeteSQL = "";   //Déclare la veriable $requeteSQL et lui assigne une valeur
 if (!empty($_GET['filtreCategorie'])){  // le parametre exprime: "si la valeur de la globale $_GET n'est pas vide alors..."
 
     $requeteSQL = "SELECT * FROM favori    /*  ... assigne, a $requeteSQL, le contenu de la table 'favori'... */ 
-    INNER JOIN `cat-fav`                    /* ...lié a la table d'association cat-fav..  */
+    INNER JOIN `cat-fav`                    /* ...lie a la table d'association cat-fav..  */
     ON favori.id_fav = `cat-fav`.`id_fav`   /**...par l'id_fav de la table favori et l'id_fav de la table cat-fav... */
 
-    INNER JOIN `categorie`                   /*...lié a la table 'categorie'... */ 
+    INNER JOIN `categorie`                   /*...lie a la table 'categorie'... */ 
     ON categorie.id_cat = `cat-fav`.id_cat    /** ...par l'id_cat de la table categorie et l'id_cat de la table cat-fav... */ 
 
-    INNER JOIN domaine                          /*...lié a la table 'domaine '... */ 
+    INNER JOIN domaine                          /*...lie a la table 'domaine '... */ 
     ON favori.id_dom = domaine.id_dom           /** ...par l'id_dom de la table favori et l'id_cat de la table domaine ...*/ 
 
-    WHERE categorie.id_cat = " . $_GET['filtreCategorie']  //...du moment que l'id_cat de la table categorie est égal a la valeur de $_GET
-    . " AND domaine.id_dom = " . $_GET['filtreDomaine'];
+    WHERE categorie.id_cat = " . $_GET['filtreCategorie']  //...du moment que l'id_cat de la table categorie est égal a la valeur de $_GET...
+    . " AND domaine.id_dom = " . $_GET['filtreDomaine'];    //...et que le 
 
-} else {                                                        //ou alors affiche la totalité de la table favori
-  $requeteSQL = "SELECT * FROM favori" ; 
+} else {                                                        
+    $requeteSQL = "SELECT * FROM favori" ;                    //ou alors assigne, a $requeteSQL, la totalité de la table favori
 };
 
 $result = $pdo->query($requeteSQL);                     //Assigne a $result la valeur de $requeteSQL  
@@ -42,11 +42,11 @@ $favori = $result->fetchAll(PDO::FETCH_ASSOC);          //Assigne a $favori la v
 
 
 <section id="bookmarks">
-        <div class="justify-between flex-row">
+        <div class="inline justify-between flex-row bg-red-700 ">
             <form method="GET" action="">
-                <div>
-                    <label for="filtreCategorie">Choisissez une catégorie:</label>
-                    <select name="filtreCategorie" id="filtreCategorie">
+                <div class="justify-between flex-row">
+                    <label class="justify-between flex-row max-w-min" for="filtreCategorie">Choisissez une catégorie:</label>
+                    <select class="justify-between flex-row max-w-min" name="filtreCategorie" id="filtreCategorie">
                         <option valeur="">--toutes--</option>
                         <?php
                             foreach ($categories as $categorie) { ?>
@@ -56,9 +56,10 @@ $favori = $result->fetchAll(PDO::FETCH_ASSOC);          //Assigne a $favori la v
                         <?php } ?>
                     </select> 
                 </div>
-                <div>
-                <label for="filtreDomaine">Choisissez un domaine:</label>
-                    <select name="filtreDomaine" id="filtreDomaine">
+
+                <div class="justify-between flex-row max-w-min">
+                    <label class="justify-between flex-row max-w-min" for="filtreDomaine">Choisissez un domaine:</label>
+                    <select class="justify-between flex-row max-w-min" name="filtreDomaine" id="filtreDomaine">
                         <option valeur="">--toutes--</option>
                         <?php
                             foreach ($domaines as $domaine) { ?>
@@ -69,10 +70,10 @@ $favori = $result->fetchAll(PDO::FETCH_ASSOC);          //Assigne a $favori la v
                     </select> 
                 </div>
 
-                <input type="submit" value="Filtrer">    
+                <input class="justify-between flex-row max-w-min" type="submit" value="Filtrer">    
 
             </form>
-            <button class="bouton ">Ajouter un favori</button>
+            <button class="bouton justify-between flex-row max-w-min">Ajouter un favori</button>
         </div>
 
         <table class="table-fav">
