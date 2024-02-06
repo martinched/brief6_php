@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e14b518d69.js" crossorigin="anonymous"></script>
-    <title>php pdo</title>
-</head>
-<body class="mx-20 bg-red-700">
-    <header>
-        <h1 class="text-3xl font-extrabold text-center m-10">Mes favoris</h1>
-    </header>
+<header class="flex flex-col justify-center items-center">
 
- 
+        <h1 class="text-3xl font-bold text-blue-900 flex font-roboto m-4 text-center">
+                Gestionnaire de favoris
+        </h1>
+           <div class=" flex justify-center">
+                <a href="index.php"> 
+                     <button class="fas fa-home bg-blue-400 hover:bg-blue-900 text-white px-4 py-2 rounded h-10 
+                                    m-4 border p-4 border-gray-300 shadow-lg ">
+                      </button> 
+                </a>
+                <form action="create.php" method="get" class="flex items-center content-center  mb-0" >    
+                      <button class="font-bold bg-blue-400 hover:bg-blue-900
+                                text-white px-4 py-2 rounded h-10 border border-gray-300 shadow-lg"
+                                >Ajouter
+                      </button>
+                </form>
+                <button onclick="toggleFilter()" class="fas fa-search bg-blue-400 text-white px-4 py-2 
+                                rounded h-10 m-4 ml-10 border p-4 border-gray-300 shadow-lg">
+                </button>
+           </div>
+</header>

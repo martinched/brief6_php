@@ -3,8 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.bouton{
+ 
+/* .bouton{ 
     background-color: green;
     color: gold;
     border-radius: 5px;
@@ -15,8 +15,5 @@
     margin-top: 0;
     margin-bottom: 20px;
     
-}
+} */
 
-body{
-    background-color: yellow;
-}
